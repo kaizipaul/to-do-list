@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import './style.css';
 
-const list = [
+const tasks = [
   {
     description: 'Do some laundry',
     completed: false,
@@ -26,8 +26,8 @@ const list = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const listContainer = document.querySelector('.todolist');
-  list.forEach((list) => {
+  tasks.forEach((list) => {
     const listHtml = `<li class="list-item" id="${list.index}"> <div><i class="fa-regular fa-square-full"></i> <span class="task">${list.description}</span></div><i class="fa-solid fa-ellipsis-vertical"></i></li>`;
-    listContainer.insertAdjacentHTML('beforehand', listHtml);
+    listContainer.insertAdjacentHTML('beforeend', listHtml);
   });
 });
