@@ -12,7 +12,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://kaizipaul.github.io/to-do-list/)
+[Live Demo Link](https://kaizipaul.github.io/to-do-list/dist/)
 
 ## Authors
 
