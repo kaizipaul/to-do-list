@@ -1,10 +1,11 @@
 /* eslint-disable linebreak-style */
 import './style.css';
 import Todolist, {
-  addListItem,
+  addListItem, list,
 } from './modules/listClass.js';
 
 const AddKey = document.getElementById('add-button');
+const clearButton = document.querySelector('.clear-list');
 
 document.addEventListener('DOMContentLoaded', () => {
   Todolist.createList();
@@ -29,4 +30,11 @@ document.addEventListener('click', (event) => {
     event.target.parentElement.classList.add('backyellow');
     Todolist.edit();
   }
+});
+
+clearButton.addEventListener('click', () => {
+  const listFiltered = list.filter((obj) => obj.complete !== true);
+  localStorage.setItem('listStorage', JSON.stringify(listFiltered));
+  Todolist.createList();
+  window.location.reload();
 });
