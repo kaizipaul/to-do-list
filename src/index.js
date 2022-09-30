@@ -27,5 +27,6 @@ AddKey.addEventListener('click', () => {
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('to-do')) {
     event.target.parentElement.classList.add('backyellow');
+    Todolist.edit();
   }
 });
