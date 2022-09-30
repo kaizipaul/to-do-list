@@ -1,33 +1,31 @@
 /* eslint-disable linebreak-style */
 import './style.css';
+import Todolist, {
+  addListItem,
+} from './modules/listClass.js';
 
-const tasks = [
-  {
-    description: 'Do some laundry',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Send email to Joffrey',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Do some house chores',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Buy groceries',
-    completed: false,
-    index: 4,
-  },
-];
+const AddKey = document.getElementById('add-button');
 
 document.addEventListener('DOMContentLoaded', () => {
-  const listContainer = document.querySelector('.todolist');
-  tasks.forEach((list) => {
-    const listHtml = `<li class="list-item" id="${list.index}"> <div><i class="fa-regular fa-square-full"></i> <span class="task">${list.description}</span></div><i class="fa-solid fa-ellipsis-vertical"></i></li>`;
-    listContainer.insertAdjacentHTML('beforeend', listHtml);
-  });
+  Todolist.createList();
+});
+
+addListItem.addEventListener('keypress', (event) => {
+  if (event.key === 'enter') {
+    Todolist.addToList();
+    Todolist.createList();
+    addListItem.value = '';
+  }
+});
+
+AddKey.addEventListener('click', () => {
+  Todolist.addToList();
+  Todolist.createList();
+  document.querySelector('input-text').value = '';
+});
+
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('to-do')) {
+    event.target.parentElement.classList.add('backyellow');
+  }
 });

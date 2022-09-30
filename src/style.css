@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 body {
-  background-color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .main-section {
@@ -11,11 +14,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 60%;
+  /* stylelint-disable-next-line csstree/validator */
+  height: fit-content;
   min-width: 50%;
   margin-inline: auto;
   background-color: #fff;
   box-shadow: 1px -3px 5px 0 rgba(0, 0, 0, 0.52);
+  border-radius: 3px;
 }
 
 .container {
@@ -55,11 +60,12 @@ body {
   background: rgba(128, 128, 128, 0.112);
 }
 
-.clr-btn {
+.clear-list {
   border: none;
   cursor: pointer;
   background-color: transparent;
   color: rgba(128, 128, 128, 0.92);
+  font-family: 'Roboto Mono', monospace;
 }
 
 .input-text {
@@ -72,4 +78,40 @@ body {
 
 i {
   color: rgba(128, 128, 128, 0.92);
+  cursor: pointer;
+}
+
+#ellipsis {
+  cursor: move;
+  display: inline;
+}
+
+.backyellow {
+  background-color: rgba(255, 217, 0, 0.169);
+}
+
+.inline {
+  display: inline;
+}
+
+.fa-trash-can {
+  display: none;
+}
+
+.fa-trash-can:hover {
+  color: red;
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  color: green;
+}
+
+.checkbox:checked::before {
+  background-color: green;
+}
+
+.fa-ellipsis-vertical {
+  cursor: move;
 }
