@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Exercise</title>
+    <title>To-do List</title>
+    <script src="https://kit.fontawesome.com/a738fb17fd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Hello Webpack</h1>
+    <section class="main-section">
+        <div class="container">
+            <div class="heading">
+                <h3 class="list-header">Today's List</h3>
+                <span><i class="fa-solid fa-rotate"></i></span>
+            </div>
+            <div class="input-items">
+                <input class="input-text" type="text" placeholder="Add to your list...">
+                <span><i class="fa-sharp fa-solid fa-arrow-left-long arrow icon"></i></span>
+            </div>
+            <ul class="todolist"></ul>
+            <div class="clear">
+                <button class="clr-btn">Clear all completed</button>
+            </div>  
+        </div>
+    </section>
 </body>
 </html>
