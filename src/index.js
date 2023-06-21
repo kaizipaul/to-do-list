@@ -1,40 +1,41 @@
-/* eslint-disable linebreak-style */
 import './style.css';
-import Todolist, {
-  addListItem,
-} from './modules/listClass.js';
+import ToDoList, { input, listContainer } from './modules/todoClass.js';
 
-import checkIfDone from './modules/clearItems.js';
+// import checkIfDone from './modules/clearItems.js';
 
 const AddKey = document.getElementById('add-button');
 
 document.addEventListener('DOMContentLoaded', () => {
-  Todolist.createList();
+  ToDoList.render();
 });
 
-addListItem.addEventListener('keypress', (event) => {
-  if (event.key === 'enter') {
-    Todolist.addToList();
-    Todolist.createList();
-    addListItem.value = '';
+input.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    ToDoList.new();
+    listContainer.innerHTML = '';
+    ToDoList.render();
+    input.value = '';
   }
 });
 
 AddKey.addEventListener('click', () => {
-  Todolist.addToList();
-  Todolist.createList();
-  document.querySelector('input-text').value = '';
+  ToDoList.new();
+  listContainer.innerHTML = '';
+  ToDoList.render();
+  input.value = '';
 });
 
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('to-do')) {
-    event.target.parentElement.classList.add('backyellow');
-    Todolist.edit();
-  }
-});
+// document.addEventListener('click', (event) => {
+//   if (event.target.classList.contains('to-do')) {
+//     event.target.parentElement.classList.add('backyellow');
+//     Todolist.edit();
+//   }
+// });
 
 const clearButton = document.querySelector('.clear-list');
 
 clearButton.addEventListener('click', () => {
-  checkIfDone();
+  listContainer.innerHTML = '';
+  ToDoList.clear();
+  ToDoList.render();
 });
