@@ -16,7 +16,7 @@ Available soon
 
 ## App Screenshot
 
-[!img(1)](./assets/app.png)
+![img(1)](./assets/app.png)
 
 ## Authors
 
