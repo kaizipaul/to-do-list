@@ -2,7 +2,7 @@
 
 # To-do List
 
-> This is a project built with Webpack, to implement a basic to-do list.
+> This project showcases the implementation of a basic to-do list using Webpack. It offers a seamless and efficient task management experience, allowing users to easily create, organize, and complete tasks. With its sleek design and powerful functionality, this project demonstrates the potential of Webpack in building practical and intuitive web applications.
 
 
 ## Built With
@@ -12,7 +12,11 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+Available soon
+
+## App Screenshot
+
+[!img](./assets/app.png)
 
 ## Authors
 

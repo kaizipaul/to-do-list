@@ -3,7 +3,7 @@ import ToDoList, { input, listContainer } from './modules/todoClass.js';
 
 // import checkIfDone from './modules/clearItems.js';
 
-const AddKey = document.getElementById('add-button');
+const AddKey = document.querySelector('.fa-circle-plus');
 
 document.addEventListener('DOMContentLoaded', () => {
   ToDoList.render();
