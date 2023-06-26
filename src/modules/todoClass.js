@@ -67,4 +67,8 @@ export default class ToDoList {
     });
     localStorage.setItem('listStorage', JSON.stringify(fromStorage));
   }
+
+  static edit = () => {
+    // future update
+  }
 }
