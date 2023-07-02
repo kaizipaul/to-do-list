@@ -1,40 +1,41 @@
-/* eslint-disable linebreak-style */
 import './style.css';
-import Todolist, {
-  addListItem,
-} from './modules/listClass.js';
+import ToDoList, { input, listContainer } from './modules/todoClass.js';
 
-import checkIfDone from './modules/clearItems.js';
+const AddKey = document.querySelector('.fa-circle-plus');
 
-const AddKey = document.getElementById('add-button');
-
+// render all the the tasks when the page fully loads
 document.addEventListener('DOMContentLoaded', () => {
-  Todolist.createList();
+  ToDoList.render();
 });
-
-addListItem.addEventListener('keypress', (event) => {
-  if (event.key === 'enter') {
-    Todolist.addToList();
-    Todolist.createList();
-    addListItem.value = '';
+// add a task when the enter button is pressed
+input.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    ToDoList.new();
+    listContainer.innerHTML = '';
+    ToDoList.render();
+    input.value = '';
   }
 });
-
+// add a task when the add button is clicked
 AddKey.addEventListener('click', () => {
-  Todolist.addToList();
-  Todolist.createList();
-  document.querySelector('input-text').value = '';
+  ToDoList.new();
+  listContainer.innerHTML = '';
+  ToDoList.render();
+  input.value = '';
 });
 
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('to-do')) {
-    event.target.parentElement.classList.add('backyellow');
-    Todolist.edit();
-  }
-});
+// future update
+// document.addEventListener('click', (event) => {
+//   if (event.target.classList.contains('to-do')) {
+//     event.target.parentElement.classList.add('backyellow');
+//     Todolist.edit();
+//   }
+// });
 
 const clearButton = document.querySelector('.clear-list');
-
+// clear all tasks that are marked complete
 clearButton.addEventListener('click', () => {
-  checkIfDone();
+  listContainer.innerHTML = '';
+  ToDoList.clear();
+  ToDoList.render();
 });

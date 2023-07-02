@@ -5,24 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
-    <script src="https://kit.fontawesome.com/a738fb17fd.js" crossorigin="anonymous"></script>
-<script defer src="/runtime.bundle.js"></script><script defer src="/main.bundle.js"></script></head>
+    <script src="https://kit.fontawesome.com/7fe3127ccf.js" crossorigin="anonymous"></script>
+<script defer src="main.js"></script></head>
 <body>
-    <section class="main-section">
-        <div class="container">
-            <div class="heading">
-                <h3 class="list-header">Today's List</h3>
-                <span><i class="fa-solid fa-rotate"></i></span>
+    <section class="main-section flex">
+            <div class="input-items flex">
+                <input class="text-field" type="text" placeholder="New task🆕...">
+                <span><i class="fa-solid fa-circle-plus"></i></span>
             </div>
-            <div class="input-items">
-                <input id="input-task" class="input-text" type="text" placeholder="Add to your list...">
-                <span><i id="add-button" class="fa-solid fa-plus"></i></span>
+            <div class="my-tasks flex">
+            <p class="list-header">My tasks📓</p>
+            <ul class="todolist flex">
+            </ul>
+            <div class="clear flex">
+                <button class="clear-list"><i class="fa-sharp fa-solid fa-circle-check"></i> Clear all completed</button>
             </div>
-            <ul class="todolist"></ul>
-            <div class="clear">
-                <button class="clear-list">Clear all completed</button>
-            </div>  
-        </div>
+            </div>
     </section>
 </body>
 </html>
