@@ -10,9 +10,9 @@
 - HTML, CSS and JavaScript
 - Webpack
 
-## Live Demo (if available)
+## Live Demo
 
-Available soon
+Access the app [here](https://kaizipaul.github.io/to-do-list/dist)
 
 ## App Screenshot
 
