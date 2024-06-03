@@ -213,3 +213,17 @@ input[type="checkbox"] {
   border: none;
   accent-color: #e8ecf0;
 }
+
+@media only screen and (max-width: 480px) {
+  .main-section {
+    width: 95%;
+  }
+
+  .list-item {
+    padding: 1rem;
+  }
+
+  .my-tasks {
+    padding: 1rem;
+  }
+}
