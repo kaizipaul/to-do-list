@@ -1,5 +1,6 @@
 /* stylelint-disable csstree/validator */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
   margin: 0;
@@ -30,7 +31,8 @@ body {
   align-items: center;
   height: 100vh;
   color: rgba(255, 255, 255, 0.8);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
 }
 
 .flex {
@@ -42,6 +44,10 @@ body {
   flex-direction: column;
   gap: 1rem;
   max-height: 80%;
+}
+
+.edit-delete {
+  gap: 1rem;
 }
 
 .my-tasks {
@@ -64,6 +70,21 @@ body {
   width: 100%;
 }
 
+.edit-input {
+  display: none;
+  border: none;
+  width: 95%;
+  height: 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(33, 74, 107, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
+}
+
 .list-item {
   list-style: none;
   display: flex;
@@ -75,7 +96,11 @@ body {
 }
 
 .task-description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.created-at {
+  font-size: 0.65rem;
 }
 
 .active {
@@ -84,8 +109,10 @@ body {
 
 .task-main {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 80%;
 }
 
 .list-header {
@@ -115,6 +142,12 @@ body {
   color: rgba(16, 37, 53, 0.9);
 }
 
+.task-column {
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+
 .text-field {
   border: none;
   width: 95%;
@@ -124,7 +157,7 @@ body {
   background-color: rgba(33, 74, 107, 0.2);
   color: rgba(255, 255, 255, 0.7);
   padding: 2rem 1rem;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
 }
@@ -151,7 +184,8 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.fa-trash {
+.fa-trash,
+.fa-file-pen {
   color: rgba(99, 128, 151, 0.5);
   font-size: 1.5rem;
   cursor: pointer;
@@ -160,6 +194,10 @@ body {
 
 .fa-trash:hover {
   color: rgba(248, 11, 11, 0.9);
+}
+
+.fa-file-pen:hover {
+  color: rgba(11, 248, 43, 0.9);
 }
 
 .todolist {
